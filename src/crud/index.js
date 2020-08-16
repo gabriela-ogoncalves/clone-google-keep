@@ -20,8 +20,16 @@ function atualizarSituacao(tarefa, data) {
     .then(resposta => resposta.data );
 }
 
+function deletar(tarefa) {
+  const headers = { 'Accept': 'application/json' };
+  return axios.delete(`${URL}/${tarefa.id}`, { headers: headers })
+    .then(resposta => resposta.data );
+
+}
+
 export default {
   getTarefasCadastradas,
   salvarNovaTarefa,
-  atualizarSituacao
+  atualizarSituacao,
+  deletar,
 };

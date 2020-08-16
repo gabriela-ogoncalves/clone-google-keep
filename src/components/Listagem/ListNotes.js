@@ -7,9 +7,9 @@ import ListItemIcon from '@material-ui/core/ListItemIcon';
 import ListItemText from '@material-ui/core/ListItemText';
 import Checkbox from '@material-ui/core/Checkbox';
 
-// import IconButton from '@material-ui/core/IconButton';
-// import ListItemSecondaryAction from '@material-ui/core/ListItemSecondaryAction';
-// import DeleteIcon from '@material-ui/icons/Delete';
+import IconButton from '@material-ui/core/IconButton';
+import ListItemSecondaryAction from '@material-ui/core/ListItemSecondaryAction';
+import DeleteIcon from '@material-ui/icons/Delete';
 
 const useStyles = makeStyles({
     list: {
@@ -17,7 +17,12 @@ const useStyles = makeStyles({
     },
     descricao: {
         textDecoration: 'line-through',
-    }
+    },
+    hover: {
+        "&:hover": {
+            backgroundColor: "#FEEFC3"
+          },
+    },
   });
 
 function ListNotes(props) {
@@ -47,11 +52,11 @@ function ListNotes(props) {
                             className={tarefa.finalizada ? classes.descricao : null} 
                             primary={tarefa.descricao}
                         />
-                        {/* <ListItemSecondaryAction>
-                            <IconButton edge="end" aria-label="trash">
+                        <ListItemSecondaryAction onClick={ () => { props.deletarTarefa(tarefa) }}>
+                            <IconButton edge="end" aria-label="trash" className={classes.hover} >
                                 <DeleteIcon />
                             </IconButton>
-                        </ListItemSecondaryAction> */}
+                        </ListItemSecondaryAction>
                     </ListItem>
                     );
                 })

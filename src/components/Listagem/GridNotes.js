@@ -30,13 +30,21 @@ export default function GridNotes() {
 
   function alternarFinalizacao(tarefa) {
     const data = { descricao: tarefa.descricao, finalizada: !tarefa.finalizada }
-    repository.atualizarSituacao(tarefa, data)
+    repository.atualizarSituacao(tarefa, data);
+  }
+
+  function deletarTarefa(tarefa) {
+    try {
+      repository.deletar(tarefa);
+    } catch (error) {
+      console.log(`Erro ao deletar a tarefa ${tarefa.descricao}`);
+    }
   }
 
   return (
     <Grid container spacing={2} justify='flex-start' className={classes.container} >
         <Grid item xs={12} sm={4} >
-          <List tarefas={tarefas} alternarFinalizacao={alternarFinalizacao} />
+          <List tarefas={tarefas} alternarFinalizacao={alternarFinalizacao} deletarTarefa={deletarTarefa} />
       </Grid>
     </Grid>
   );

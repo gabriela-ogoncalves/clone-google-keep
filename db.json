@@ -6,7 +6,7 @@
       "id": 1
     },
     {
-      "descricao": "Terminar projeto",
+      "descricao": "Terminar esse projeto",
       "finalizada": true,
       "id": 2
     },
@@ -16,14 +16,19 @@
       "id": 3
     },
     {
-      "descricao": "Riscar quando acabar tarefa",
+      "descricao": "Riscar tarefa ao concluir",
       "finalizada": true,
       "id": 4
     },
     {
-      "descricao": "assistir a última aula",
-      "finalizada": false,
+      "descricao": "Inserir opção de excluir",
+      "finalizada": true,
       "id": 5
+    },
+    {
+      "descricao": "Assistir a última aula",
+      "finalizada": false,
+      "id": 6
     }
   ]
 }
