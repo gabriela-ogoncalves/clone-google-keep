@@ -6,13 +6,13 @@
       "id": 1
     },
     {
-      "descricao": "terminar projeto",
-      "finalizada": false,
+      "descricao": "Terminar projeto",
+      "finalizada": true,
       "id": 2
     },
     {
       "descricao": "Dormir",
-      "finalizada": true,
+      "finalizada": false,
       "id": 3
     },
     {
@@ -21,8 +21,8 @@
       "id": 4
     },
     {
-      "descricao": "teste final",
-      "finalizada": true,
+      "descricao": "assistir a última aula",
+      "finalizada": false,
       "id": 5
     }
   ]
