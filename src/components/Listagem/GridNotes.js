@@ -28,12 +28,16 @@ export default function GridNotes() {
       });
   })
 
+  function alternarFinalizacao(tarefa) {
+    const data = { descricao: tarefa.descricao, finalizada: !tarefa.finalizada }
+    repository.atualizarSituacao(tarefa, data)
+  }
+
   return (
     <Grid container spacing={2} justify='flex-start' className={classes.container} >
         <Grid item xs={12} sm={4} >
-          <List tarefas={tarefas} />
+          <List tarefas={tarefas} alternarFinalizacao={alternarFinalizacao} />
       </Grid>
     </Grid>
-
   );
 }

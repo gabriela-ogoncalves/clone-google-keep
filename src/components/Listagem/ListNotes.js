@@ -7,10 +7,17 @@ import ListItemIcon from '@material-ui/core/ListItemIcon';
 import ListItemText from '@material-ui/core/ListItemText';
 import Checkbox from '@material-ui/core/Checkbox';
 
+// import IconButton from '@material-ui/core/IconButton';
+// import ListItemSecondaryAction from '@material-ui/core/ListItemSecondaryAction';
+// import DeleteIcon from '@material-ui/icons/Delete';
+
 const useStyles = makeStyles({
     list: {
         padding: 0
     },
+    descricao: {
+        textDecoration: 'line-through',
+    }
   });
 
 function ListNotes(props) {
@@ -22,7 +29,12 @@ function ListNotes(props) {
                 {
                 props.tarefas.map((tarefa) => {
                     return(
-                    <ListItem dense button key={tarefa.id} >
+                    <ListItem 
+                        dense 
+                        button 
+                        key={tarefa.id} 
+                        onClick={() => { props.alternarFinalizacao(tarefa) }} 
+                    >
                         <ListItemIcon>
                         <Checkbox
                             style={ tarefa.finalizada ?  { color: '#FE9A2E'} : null}
@@ -31,7 +43,15 @@ function ListNotes(props) {
                             disableRipple
                             />
                         </ListItemIcon>
-                        <ListItemText primary={tarefa.descricao}/>
+                        <ListItemText 
+                            className={tarefa.finalizada ? classes.descricao : null} 
+                            primary={tarefa.descricao}
+                        />
+                        {/* <ListItemSecondaryAction>
+                            <IconButton edge="end" aria-label="trash">
+                                <DeleteIcon />
+                            </IconButton>
+                        </ListItemSecondaryAction> */}
                     </ListItem>
                     );
                 })
