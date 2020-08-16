@@ -19,5 +19,5 @@ O projeto é um clone do Google Keep, com a possibilidade de adicionar uma taref
 
 ## 🖼️ Prévia
 
-![](https://github.com/gabriela-ogoncalves/clone-google-keep/tree/master/imagensDoProjeto/01.png)
-![](https://github.com/gabriela-ogoncalves/clone-google-keep/tree/master/imagensDoProjeto/02.png)
+![](https://github.com/gabriela-ogoncalves/clone-google-keep/blob/master/imagensDoProjeto/01.png)
+![](https://github.com/gabriela-ogoncalves/clone-google-keep/blob/master/imagensDoProjeto/02.png)
