@@ -12,7 +12,6 @@ O projeto Keep Clone foi desenvolvido durante a semana de desenvolvimento web, p
 
 
 ## 🎨 O Projeto
-*⚙ Em andamento*
 
 O projeto é um clone do Google Keep, com a possibilidade de adicionar uma tarefa através do botão enter do teclado. 
 
